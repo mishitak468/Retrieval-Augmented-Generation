@@ -1,0 +1,12 @@
+# Models and Data
+*.gguf
+documents.json
+preprocessed_documents.json
+
+# Python artifacts
+__pycache__/
+.vscode/
+
+# Environment
+.env
+venv/

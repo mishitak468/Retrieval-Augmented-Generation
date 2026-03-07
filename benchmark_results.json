@@ -1,0 +1,42 @@
+{
+  "model": "tinyllama",
+  "n_queries": 10,
+  "statistics": {
+    "encoding": {
+      "mean": 0.3627918720245361,
+      "std": 0.34355867855120514,
+      "min": 0.04576587677001953,
+      "max": 1.1247050762176514
+    },
+    "vector_search": {
+      "mean": 0.01251528263092041,
+      "std": 0.008116994690798667,
+      "min": 0.0010349750518798828,
+      "max": 0.026009798049926758
+    },
+    "prompt_augmentation": {
+      "mean": 1.940727233886719e-05,
+      "std": 1.023379639458921e-05,
+      "min": 5.9604644775390625e-06,
+      "max": 4.100799560546875e-05
+    },
+    "llm_generation": {
+      "mean": 2.6518080949783327,
+      "std": 1.953140258688926,
+      "min": 0.8104000091552734,
+      "max": 6.6189939975738525
+    }
+  },
+  "queries": [
+    "does human hair stop squirrels",
+    "what are the benefits of fossil fuels",
+    "what is a apothem",
+    "average cost for custom canopy",
+    "what is a hardware in a computer",
+    "edi logistics definition",
+    "why should recreational marijuana be illegal",
+    "what class are spiders in",
+    "where is the amur leopard found",
+    "how much does it cost to spayed my female rabbit"
+  ]
+}
