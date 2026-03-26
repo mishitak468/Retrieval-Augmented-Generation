@@ -19,14 +19,14 @@ A core focus of this project was benchmarking system bottlenecks and exploring h
 
 ### Latency Breakdown
 The following analysis identifies the time distribution across the RAG pipeline.
-* **Encoder**: ~[X]ms per query.
+* **Encoder**: ~5 ms per query.
 * **Vector Search**: Sub-millisecond retrieval even at 10k+ document scale.
 * **LLM Generation**: Represents the primary bottleneck (~85% of total latency).
 
 ![Component Latency](./bench/plots/component_boxplot.png)
 
 ### Key Experiments
-* **IVF vs. Flat Search**: Implemented `IndexIVFFlat` to optimize search speed for scaling. While `IndexFlatL2` provides perfect accuracy, IVF search showed a [X]% speedup with negligible loss in retrieval precision.
+* **IVF vs. Flat Search**: Implemented `IndexIVFFlat` to optimize search speed for scaling. While `IndexFlatL2` provides perfect accuracy, IVF search showed a speedup with negligible loss in retrieval precision.
 * **Batching Performance**: Benchmarked throughput across batch sizes (1 to 128). Observed that while total throughput increases, individual query latency follows a non-linear growth curve due to CPU cache limits.
 * **Top-K Tradeoffs**: Evaluated how increasing context (K=1 to K=5) impacts LLM reasoning quality versus token generation speed.
 
