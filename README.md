@@ -2,19 +2,19 @@
 
 A high-performance, locally-hosted RAG pipeline built from scratch. This system enables precise question-answering over private datasets by combining semantic vector search with large language model (LLM) generation.
 
-## 🚀 Overview
+##  Overview
 Traditional LLMs often struggle with hallucinations or outdated information. This project solves that by implementing a "closed-book to open-book" architecture:
 1.  **Ingestion**: Documents are embedded into a 768-dimensional vector space using the **BAAI/bge-base-en-v1.5** encoder.
 2.  **Retrieval**: A vector database (built with **FAISS**) identifies the top-K most relevant document chunks for a given query.
 3.  **Generation**: A local LLM (**TinyLlama-1.1B** or **Qwen2**) generates a response grounded strictly in the retrieved context.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 * **Vector Search**: FAISS (Facebook AI Similarity Search)
 * **LLM Inference**: llama.cpp / llama-cpp-python
 * **Models**: BGE-base-en-v1.5 (Encoder), TinyLlama-1.1B-Chat, Qwen2-1.5B
 * **Data Handling**: NumPy, Pandas, Matplotlib (for performance analytics)
 
-## 📊 System Analysis & Optimizations
+## System Analysis & Optimizations
 A core focus of this project was benchmarking system bottlenecks and exploring hardware/software tradeoffs.
 
 ### Latency Breakdown
